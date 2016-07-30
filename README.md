@@ -4,11 +4,13 @@ I am currently developing a keyboard and hosting app for the Kouri-Vini Communit
 
 At the current state, the keyboard works well on iPhones. However, the landscape ipad orientation is not currently correct.
 
-## Recent Screenshots
+## Recent Screenshots of Keyboard
 
 <img style="border: gray 1px solid;" width="320px" src="./Screenshot-Portrait.png"></img>
 <img style="border: gray 1px solid;" width="568px" src="./Screenshot-Landscape.png"></img>
 <img style="border: gray 1px solid;" width="320px" src="./Settings-Portrait.png"></img>
+
+## Recent Screenshots and information regading the Hosting App
 
 ## Purpose
 The keyboard was created basically to allow Kouri-Vini speakers have a language specific keyboard. I am posting it on Github for the hope that others might use this code to create keyboard support for other minority languages. If you wish to contact me or learn about the current state of the Kouri-Vini Keyboard Project, check out www.keyboardsupport.wordpress.com
