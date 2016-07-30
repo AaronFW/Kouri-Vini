@@ -6,14 +6,19 @@ At the current state, the keyboard works well on iPhones. However, the landscape
 
 ## Recent Screenshots of Keyboard
 
-<img style="border: gray 1px solid;" width="320px" src="./Screenshot-Portrait.png"></img>
+<img style="border: gray 1px solid;" width="320px" src="./Screenshot-Portrait.png"></img> <img style="border: gray 1px solid;" width="320px" src="./Settings-Portrait.png"></img>
 <img style="border: gray 1px solid;" width="568px" src="./Screenshot-Landscape.png"></img>
-<img style="border: gray 1px solid;" width="320px" src="./Settings-Portrait.png"></img>
+
 
 ## Recent Screenshots and information regading the Hosting App
+NOTE: If you want to see what the keyboard is capable of, check out the project version by PolishedCode https://github.com/polishedcode/tasty-imitation-keyboard or the original by Archagon https://github.com/archagon/tasty-imitation-keyboard
+
 
 ## Purpose
 The keyboard was created basically to allow Kouri-Vini speakers have a language specific keyboard. I am posting it on Github for the hope that others might use this code to create keyboard support for other minority languages. If you wish to contact me or learn about the current state of the Kouri-Vini Keyboard Project, check out www.keyboardsupport.wordpress.com
+
+## Please note:
+I have removed some features from PolishedCode's project to fit my needs and the needs of my audience. I have not yet removed the undesired code, but it has been left non-functioning. I also hope to revise the names of some fuctions to be conformed to the current project.
 
 ## License
 
