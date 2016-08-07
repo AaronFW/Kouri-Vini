@@ -1,87 +1,45 @@
 //
 //  ViewController.swift
-//  TransliteratingKeyboard
+//  Kouri-Vini
 //
-//  Created by Alexei Baboulevitch on 6/9/14.
-//  Copyright (c) 2014 Alexei Baboulevitch ("Archagon"). All rights reserved.
+//  Created by Aaron Walton on 4/3/16.
+//  Copyright © 2016 Aaron Walton. All rights reserved.
 //
 
 import UIKit
+import AVFoundation
 
-class HostingAppViewController: UIViewController {
+
+class ViewController: UIViewController{
     
-    @IBOutlet var stats: UILabel?
+    @IBOutlet weak var setupButton: UIButton!
+
+    @IBOutlet weak var useButton: UIButton!
     
+    @IBOutlet weak var learnButton: UIButton!
+    
+    @IBAction func setupButton(sender: AnyObject) {
+        
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow"), name: UIKeyboardWillShowNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidHide"), name: UIKeyboardDidHideNotification, object: nil)
-        //NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillChangeFrame:"), name: UIKeyboardWillChangeFrameNotification, object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidChangeFrame:"), name: UIKeyboardDidChangeFrameNotification, object: nil)
+        // Do any additional setup after loading the view, typically from a nib.
+     print("No")
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func dismiss() {
-        for view in self.view.subviews {
-            if let inputView = view as? UITextField {
-                inputView.resignFirstResponder()
-            }
-        }
-    }
-    
-    var startTime: NSTimeInterval?
-    var firstHeightTime: NSTimeInterval?
-    var secondHeightTime: NSTimeInterval?
-    var referenceHeight: CGFloat = 216
-    
-    func keyboardWillShow() {
-        if startTime == nil {
-            startTime = CACurrentMediaTime()
-        }
-    }
-    
-    func keyboardDidHide() {
-        startTime = nil
-        firstHeightTime = nil
-        secondHeightTime = nil
+    func shareTapped() {
         
-        self.stats?.text = "(Waiting for keyboard...)"
     }
     
-    func keyboardDidChangeFrame(notification: NSNotification) {
-        //let frameBegin: CGRect! = notification.userInfo?[UIKeyboardFrameBeginUserInfoKey]?.CGRectValue
-        let frameEnd: CGRect! = notification.userInfo?[UIKeyboardFrameEndUserInfoKey]?.CGRectValue
+    @IBAction func playVideo(sender: AnyObject) {
         
-        if frameEnd.height == referenceHeight {
-            if firstHeightTime == nil {
-                firstHeightTime = CACurrentMediaTime()
-                
-                if let startTime = self.startTime {
-                    if let firstHeightTime = self.firstHeightTime {
-                        let formatString = NSString(format: "First: %.2f, Total: %.2f", (firstHeightTime - startTime), (firstHeightTime - startTime))
-                        self.stats?.text = formatString as String
-                    }
-                }
-            }
-        }
-        else if frameEnd.height != 0 {
-            if secondHeightTime == nil {
-                secondHeightTime = CACurrentMediaTime()
+    }
 
-                if let startTime = self.startTime {
-                    if let firstHeightTime = self.firstHeightTime {
-                        if let secondHeightTime = self.secondHeightTime {
-                            let formatString = NSString(format: "First: %.2f, Second: %.2f, Total: %.2f", (firstHeightTime - startTime), (secondHeightTime - firstHeightTime), (secondHeightTime - startTime))
-                            self.stats?.text = formatString as String
-                        }
-                    }
-                }
-            }
-        }
-    }
 }
 

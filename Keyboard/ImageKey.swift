@@ -3,7 +3,7 @@
 //  TastyImitationKeyboard
 //
 //  Created by Alexei Baboulevitch on 11/2/14.
-//  Copyright (c) 2014 Alexei Baboulevitch ("Archagon"). All rights reserved.
+//  Copyright (c) 2014 Alexei Baboulevitch. All rights reserved.
 //
 
 import UIKit
@@ -31,12 +31,7 @@ class ImageKey: KeyboardKey {
         let switchColors = self.highlighted || self.selected
         
         if switchColors {
-            if let downTextColor = self.downTextColor {
-                self.image?.tintColor = downTextColor
-            }
-            else {
-                self.image?.tintColor = self.textColor
-            }
+            self.image?.tintColor = self.downTextColor ?? self.textColor
         }
         else {
             self.image?.tintColor = self.textColor

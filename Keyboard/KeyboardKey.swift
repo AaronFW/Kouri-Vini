@@ -3,7 +3,7 @@
 //  TransliteratingKeyboard
 //
 //  Created by Alexei Baboulevitch on 6/9/14.
-//  Copyright (c) 2014 Alexei Baboulevitch ("Archagon"). All rights reserved.
+//  Copyright (c) 2014 Apple. All rights reserved.
 //
 
 import UIKit
@@ -156,29 +156,31 @@ class KeyboardKey: UIControl {
         self.addSubview(self.background)
         self.background.addSubview(self.label)
         
-        let setupViews: Void = {
-            self.displayView.opaque = false
-            self.underView?.opaque = false
-            self.borderView?.opaque = false
-            
-            self.shadowLayer.shadowOpacity = Float(0.2)
-            self.shadowLayer.shadowRadius = 4
-            self.shadowLayer.shadowOffset = CGSizeMake(0, 3)
-            
-            self.borderView?.lineWidth = CGFloat(0.5)
-            self.borderView?.fillColor = UIColor.clearColor()
-            
-            self.label.textAlignment = NSTextAlignment.Center
-            self.label.baselineAdjustment = UIBaselineAdjustment.AlignCenters
-            self.label.font = self.label.font.fontWithSize(22)
-            self.label.adjustsFontSizeToFitWidth = true
-            self.label.minimumScaleFactor = CGFloat(0.1)
-            self.label.userInteractionEnabled = false
-            self.label.numberOfLines = 1
-        }()
+        setupViews()
     }
     
-    required init?(coder: NSCoder) {
+    private func setupViews() {
+        self.displayView.opaque = false
+        self.underView?.opaque = false
+        self.borderView?.opaque = false
+        
+        self.shadowLayer.shadowOpacity = Float(0.2)
+        self.shadowLayer.shadowRadius = 4
+        self.shadowLayer.shadowOffset = CGSizeMake(0, 3)
+        
+        self.borderView?.lineWidth = CGFloat(0.5)
+        self.borderView?.fillColor = UIColor.clearColor()
+        
+        self.label.textAlignment = NSTextAlignment.Center
+        self.label.baselineAdjustment = UIBaselineAdjustment.AlignCenters
+        self.label.font = self.label.font.fontWithSize(22)
+        self.label.adjustsFontSizeToFitWidth = true
+        self.label.minimumScaleFactor = CGFloat(0.1)
+        self.label.userInteractionEnabled = false
+        self.label.numberOfLines = 1
+    }
+    
+    required init(coder: NSCoder) {
         fatalError("NSCoding not supported")
     }
     
@@ -247,7 +249,7 @@ class KeyboardKey: UIControl {
                 path?.applyTransform(transformFromShapeToView)
                 if path != nil { toPath.appendPath(path!) }
                 if let edgePaths = shape.edgePaths {
-                    for (_, anEdgePath) in edgePaths.enumerate() {
+                    for anEdgePath in edgePaths {
                         let editablePath = anEdgePath
                         editablePath.applyTransform(transformFromShapeToView)
                         toEdgePaths.appendPath(editablePath)
@@ -271,7 +273,7 @@ class KeyboardKey: UIControl {
         CATransaction.begin()
         CATransaction.setDisableActions(true)
         
-        if let _ = self.popup {
+        if self.popup != nil {
             self.shadowLayer.shadowPath = shadowPath.CGPath
         }
         
@@ -305,10 +307,6 @@ class KeyboardKey: UIControl {
     }
     
     func redrawText() {
-//        self.keyView.frame = self.bounds
-//        self.button.frame = self.bounds
-//        
-//        self.button.setTitle(self.text, forState: UIControlState.Normal)
     }
     
     func redrawShape() {
@@ -336,43 +334,18 @@ class KeyboardKey: UIControl {
         let switchColors = self.highlighted || self.selected
         
         if switchColors {
-            if let downColor = self.downColor {
-                self.displayView.fillColor = downColor
-            }
-            else {
-                self.displayView.fillColor = self.color
-            }
-            
-            if let downUnderColor = self.downUnderColor {
-                self.underView?.fillColor = downUnderColor
-            }
-            else {
-                self.underView?.fillColor = self.underColor
-            }
-            
-            if let downBorderColor = self.downBorderColor {
-                self.borderView?.strokeColor = downBorderColor
-            }
-            else {
-                self.borderView?.strokeColor = self.borderColor
-            }
-            
-            if let downTextColor = self.downTextColor {
-                self.label.textColor = downTextColor
-                self.popupLabel?.textColor = downTextColor
-                self.shape?.color = downTextColor
-            }
-            else {
-                self.label.textColor = self.textColor
-                self.popupLabel?.textColor = self.textColor
-                self.shape?.color = self.textColor
-            }
+            self.displayView.fillColor = self.downColor ?? self.color
+            self.underView?.fillColor = self.downUnderColor ?? self.underColor
+            self.borderView?.strokeColor = self.downBorderColor ?? self.borderColor
+
+            let textColor = self.downTextColor ?? self.textColor
+            self.label.textColor = textColor
+            self.popupLabel?.textColor = textColor
+            self.shape?.color = textColor
         }
         else {
             self.displayView.fillColor = self.color
-            
             self.underView?.fillColor = self.underColor
-            
             self.borderView?.strokeColor = self.borderColor
             
             self.label.textColor = self.textColor
@@ -417,12 +390,6 @@ class KeyboardKey: UIControl {
         self.connector!.layer.zPosition = -1
         self.addSubview(self.connector!)
         
-//        self.drawBorder = true
-        
-        if direction == Direction.Up {
-//            self.popup!.drawUnder = false
-//            self.connector!.drawUnder = false
-        }
     }
     
     func showPopup() {
@@ -575,9 +542,4 @@ class ShapeView: UIView {
         }
     }
     
-//    override func drawRect(rect: CGRect) {
-//        if self.shapeLayer == nil {
-//            self.drawCall(rect)
-//        }
-//    }
 }
