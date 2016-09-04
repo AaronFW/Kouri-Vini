@@ -137,7 +137,7 @@ class KeyboardViewController: UIInputViewController {
             kAutoCapitalization: true,
             kPeriodShortcut: true,
             kKeyboardClicks: false,
-            kSmallLowercase: false,
+            kSmallLowercase: true,
             kActiveLanguageCode: vKVLanguageCode,
             kQuickSwitch: true
             ])
@@ -346,11 +346,11 @@ class KeyboardViewController: UIInputViewController {
             self.toggleSettings()
             return true
 
-        } else if selection.characters.count == 2 {
+        } /*else if selection.characters.count == 2 {
             // switch language AND keyboard layout
             ChangeKeyboardLanguage(selection)
             return true
-        }
+        }*/
 
         return false
     }
@@ -425,9 +425,12 @@ class KeyboardViewController: UIInputViewController {
         
 		let actualScreenWidth = (UIScreen.mainScreen().nativeBounds.size.width /
 			UIScreen.mainScreen().nativeScale)
+        
+        let actualScreenHeight = (UIScreen.mainScreen().nativeBounds.size.height / UIScreen.mainScreen().nativeScale)
 		
 		let canonicalPortraitHeight = CGFloat(orientation.isPortrait && actualScreenWidth >= 400 ? 226 : 216)
-		let canonicalLandscapeHeight = CGFloat(162)
+        
+        let canonicalLandscapeHeight = CGFloat(orientation.isLandscape && actualScreenHeight >= 800 ? 330 : 162)
 		
 		let topBannerHeight = (withTopBanner && textDocumentProxy.keyboardType != UIKeyboardType.NumberPad && textDocumentProxy.keyboardType != UIKeyboardType.DecimalPad)
             ? metric("topBanner") : 0

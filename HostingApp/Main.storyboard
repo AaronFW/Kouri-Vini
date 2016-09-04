@@ -253,7 +253,7 @@
         <!--Learn-->
         <scene sceneID="oy6-4Z-ePr">
             <objects>
-                <tableViewController storyboardIdentifier="LearnViewController" id="IS1-l3-ZVo" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="LearnViewController" id="IS1-l3-ZVo" customClass="LearningTableViewController" customModule="Kouri_Vini" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="BxO-Do-mb8">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -299,15 +299,13 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <segue destination="acl-HQ-CRQ" kind="show" id="cBm-P8-Ozo"/>
-                                        </connections>
+                                        <gestureRecognizers/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Other tools" id="V69-0Q-sbK">
+                            <tableViewSection headerTitle="Other tools and resources" id="V69-0Q-sbK">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="g0w-7P-h3U">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dictionaryCell" id="g0w-7P-h3U">
                                         <rect key="frame" x="0.0" y="301.5" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="g0w-7P-h3U" id="UoX-A2-Fb8">
@@ -325,6 +323,38 @@
                                         <connections>
                                             <segue destination="Atd-vF-Usi" kind="show" identifier="dictionarySegue" id="NK0-ad-mON"/>
                                         </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="lhcvCell" id="OaM-P4-K2q">
+                                        <rect key="frame" x="0.0" y="345.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="OaM-P4-K2q" id="zC6-cJ-d6L">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Louisiana Historic and Cultural Vistas" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r0d-Ge-5mN">
+                                                    <rect key="frame" x="8" y="11" width="296" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Atu-rW-4do">
+                                        <rect key="frame" x="0.0" y="389.5" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Atu-rW-4do" id="6mb-l2-J0s">
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="LHVC Youtube Channel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t0n-8I-v2I">
+                                                    <rect key="frame" x="8" y="11" width="296" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -357,7 +387,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="y8G-E1-lVM" kind="show" id="iLT-u0-pXF"/>
+                                    <segue destination="fwl-27-0cM" kind="show" identifier="showDetail" id="qf1-Af-8pm"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -371,33 +401,23 @@
             </objects>
             <point key="canvasLocation" x="2814" y="2554"/>
         </scene>
-        <!--Section Table View Controller-->
-        <scene sceneID="zbP-pG-cIu">
+        <!--Section View Controller-->
+        <scene sceneID="ndb-Hl-EQX">
             <objects>
-                <tableViewController id="y8G-E1-lVM" customClass="SectionTableViewController" customModule="Kouri_Vini" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="EwA-P4-NWE">
+                <viewController id="fwl-27-0cM" customClass="SectionViewController" customModule="Kouri_Vini" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="5LM-u5-gtM"/>
+                        <viewControllerLayoutGuide type="bottom" id="OuP-rK-ZqP"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="oxs-SW-uHJ">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="UdX-iW-6Ve">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="UdX-iW-6Ve" id="UrL-pi-cLy">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="y8G-E1-lVM" id="VIv-Kg-ICK"/>
-                            <outlet property="delegate" destination="y8G-E1-lVM" id="hzB-uA-jw8"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="emT-6U-yaU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ToV-9o-D5r" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3452" y="2554"/>
+            <point key="canvasLocation" x="3526" y="2554"/>
         </scene>
         <!--Web View Controller-->
         <scene sceneID="9m6-FT-ZqP">
@@ -429,68 +449,6 @@
             </objects>
             <point key="canvasLocation" x="2893" y="3267"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="y8v-W1-quo">
-            <objects>
-                <viewController id="pXt-Kb-n26" customClass="ViewController" customModule="Kouri_Vini" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="D5c-zY-OpT"/>
-                        <viewControllerLayoutGuide type="bottom" id="hK8-wH-hfb"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="DTU-CV-CcY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pr4-6M-XKR">
-                                <rect key="frame" x="20" y="147" width="111" height="62"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="27"/>
-                                <state key="normal" title="Set Up"/>
-                                <connections>
-                                    <action selector="setupButton:" destination="pXt-Kb-n26" eventType="touchUpInside" id="9Yz-Fl-rhV"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="En3-ju-eHl">
-                                <rect key="frame" x="20" y="287" width="111" height="62"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="27"/>
-                                <state key="normal" title="Learn"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wvx-FW-HhS">
-                                <rect key="frame" x="20" y="217" width="111" height="62"/>
-                                <fontDescription key="fontDescription" name="BradleyHandITCTT-Bold" family="Bradley Hand" pointSize="27"/>
-                                <state key="normal" title="Use"/>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="KqB-hw-coU"/>
-                    <connections>
-                        <outlet property="learnButton" destination="En3-ju-eHl" id="a5Q-UZ-HWx"/>
-                        <outlet property="setupButton" destination="pr4-6M-XKR" id="x1j-kA-i1A"/>
-                        <outlet property="useButton" destination="Wvx-FW-HhS" id="tUH-9E-H0H"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="qtL-qc-FfI" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="268" y="1673"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="IQh-Fu-beu">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="z4b-hl-75T" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="WOF-yb-0qm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="pXt-Kb-n26" kind="relationship" relationship="rootViewController" id="RUO-tV-fR6"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ZgS-4x-4WU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-248" y="1287"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="I7H-RM-YZb">
             <objects>
@@ -502,7 +460,6 @@
                     </tabBar>
                     <connections>
                         <segue destination="3Te-5k-SiT" kind="relationship" relationship="viewControllers" id="WLf-XZ-unh"/>
-                        <segue destination="wRv-NR-7nx" kind="relationship" relationship="viewControllers" id="pZb-Uh-2MR"/>
                         <segue destination="tm1-DO-jAG" kind="relationship" relationship="viewControllers" id="4vA-eD-BHC"/>
                     </connections>
                 </tabBarController>
@@ -565,37 +522,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUy-eh-mbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1477" y="2533"/>
-        </scene>
-        <!--Memrise View Controller-->
-        <scene sceneID="axg-Lq-Bfh">
-            <objects>
-                <viewController id="acl-HQ-CRQ" customClass="memriseViewController" customModule="Kouri_Vini" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="iLL-Ho-xzQ"/>
-                        <viewControllerLayoutGuide type="bottom" id="PG7-6f-26W"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Vlv-bJ-hDS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3O9-7K-zrX">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
-                                <items>
-                                    <navigationItem title="Title" id="cnq-36-h17"/>
-                                </items>
-                            </navigationBar>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7l7-xt-dbV">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="No2-SQ-1Ol" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2261" y="3275"/>
+            <point key="canvasLocation" x="1474" y="2524"/>
         </scene>
     </scenes>
     <resources>

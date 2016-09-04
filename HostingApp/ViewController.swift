@@ -12,16 +12,6 @@ import AVFoundation
 
 class ViewController: UIViewController{
     
-    @IBOutlet weak var setupButton: UIButton!
-
-    @IBOutlet weak var useButton: UIButton!
-    
-    @IBOutlet weak var learnButton: UIButton!
-    
-    @IBAction func setupButton(sender: AnyObject) {
-        
-        
-    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -36,10 +26,7 @@ class ViewController: UIViewController{
     func shareTapped() {
         
     }
-    
-    @IBAction func playVideo(sender: AnyObject) {
-        
-    }
+
 
 }
 

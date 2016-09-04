@@ -9,11 +9,10 @@
 import UIKit
 
 class LearningTableViewController: UITableViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,7 +26,7 @@ class LearningTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+/*
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 2
@@ -36,7 +35,7 @@ class LearningTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 0
-    }
+    }*/
 
     /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -85,16 +84,57 @@ class LearningTableViewController: UITableViewController {
 
     
     // MARK: - Navigation
-
+    
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "OrthoGuide" {
-            let webViewController = segue.destinationViewController as! WebViewController
-            webViewController.loadView()
+        if segue.identifier == "dictionarySegue" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let selection = indexPath.row
+                let webViewController = segue.destinationViewController as! WebViewController
+                webViewController.selection = selection
+                print(selection)
+            }
+            
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
         }
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "lhcvSegue" {
+            if let indexPath = self.tableView.indexPathForSelectedRow {
+                let selection = indexPath.item
+                print(selection)
+                let webViewController = segue.destinationViewController as! WebViewController
+               webViewController.selection = selection
+            }
+            
+            // Get the new view controller using segue.destinationViewController.
+            // Pass the selected object to the new view controller.
+        }
+        
+
     }
     
-
+    override func tableView(tableView: UITableView!, didSelectRowAtIndexPath indexPath: NSIndexPath!) {
+        print("You selected cell number: \(indexPath.row)!")
+        switch indexPath.row {
+        case 0:
+            if indexPath.section == 2 {
+             //UIApplication.sharedApplication().openURL(NSURL(string: "http://www.mylhcv.com")!)
+            }
+            if indexPath.section == 1 {
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://www.memrise.com/course/1046984/kouri-vini-louisiana-creole-language/")!)
+            }
+        case 1:
+            if indexPath.section == 2 {
+                UIApplication.sharedApplication().openURL(NSURL(string: "http://www.mylhcv.com")!)
+            }
+        case 2:
+            if indexPath.section == 2 {
+                UIApplication.sharedApplication().openURL(NSURL(string: "https://www.youtube.com/user/criollokid80/videos")!)
+            }
+        default :
+            break
+            
+        }
+       // self.performSegueWithIdentifier("lhcvSegue", sender: self)
+    }
 }

@@ -10,7 +10,6 @@ import UIKit
 
 class OrthographyGuideTableViewController: UITableViewController {
 
-    var detailViewController: SectionTableViewController? = nil
     var objects = [String]()
     
     
@@ -35,8 +34,9 @@ class OrthographyGuideTableViewController: UITableViewController {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row]
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! SectionTableViewController
+                let controller = segue.destinationViewController as! SectionViewController
                 controller.detailItem = object
+                print(object)
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }

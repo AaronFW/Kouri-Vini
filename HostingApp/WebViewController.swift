@@ -13,13 +13,45 @@ class WebViewController: UIViewController, WKNavigationDelegate {
     
     var webView: WKWebView!
     
+    var selection: AnyObject? {
+        didSet {
+            // Update the view.
+         //   self.configureView()
+        }
+    }
+    
+  /*  func configureView() {
+        // Update the user interface for the detail item.
+        if let detail = self.selection {
+                navigationItem.title = detail.description
+                
+                print("yes", detail.description)
+        }
+    }*/
+    
     override func loadView() {
         webView = WKWebView()
         webView.navigationDelegate = self
         view = webView
-        let url = NSURL(string: "http://www.louisianacreoledictionary.com/mobile/")!
-        webView.loadRequest(NSURLRequest(URL: url))
-        webView.allowsBackForwardNavigationGestures = true
+        switch selection?.description {
+        case "0"? :
+         let url = NSURL(string: "http://www.louisianacreoledictionary.com/mobile/")!
+         webView.loadRequest(NSURLRequest(URL: url))
+         webView.allowsBackForwardNavigationGestures = true
+            navigationItem.title = "En -> KV Dictionary"
+        case "1"? :
+            UIApplication.sharedApplication().openURL(NSURL(string: "http://www.mylhcv.com")!)
+            
+        default:
+            let url = NSURL(string: "https://www.google.com")!
+            webView.loadRequest(NSURLRequest(URL: url))
+            webView.allowsBackForwardNavigationGestures = true
+        }
+        
+        
+        
+              //  let url = NSURL(string: "http://www.louisianacreoledictionary.com/mobile/")!
+        
     }
 
     override func viewDidLoad() {

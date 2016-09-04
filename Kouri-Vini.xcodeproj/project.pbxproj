@@ -67,10 +67,18 @@
 		9211FFC81D3BE861007E5273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9211FFBF1D3BE861007E5273 /* LaunchScreen.storyboard */; };
 		9211FFC91D3BE861007E5273 /* LearningTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFC01D3BE861007E5273 /* LearningTableViewController.swift */; };
 		9211FFCA1D3BE861007E5273 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFC11D3BE861007E5273 /* WebViewController.swift */; };
-		9211FFCB1D3BE861007E5273 /* memriseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFC21D3BE861007E5273 /* memriseViewController.swift */; };
 		9211FFCC1D3BE861007E5273 /* OrthographyGuideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFC31D3BE861007E5273 /* OrthographyGuideTableViewController.swift */; };
-		9211FFCD1D3BE861007E5273 /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFC41D3BE861007E5273 /* SectionTableViewController.swift */; };
 		9211FFCF1D3C0776007E5273 /* WERTY.json in Resources */ = {isa = PBXBuildFile; fileRef = 9211FFCE1D3C0776007E5273 /* WERTY.json */; };
+		926815671D75AD98006FA983 /* 2.1.2 Consonants.txt in Resources */ = {isa = PBXBuildFile; fileRef = 926815631D75AD98006FA983 /* 2.1.2 Consonants.txt */; };
+		926815681D75AD98006FA983 /* 2.2 Accent marks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 926815641D75AD98006FA983 /* 2.2 Accent marks.txt */; };
+		926815691D75AD98006FA983 /* 3. Punctuation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 926815651D75AD98006FA983 /* 3. Punctuation.txt */; };
+		9268156A1D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 926815661D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt */; };
+		9268156E1D75B1CE006FA983 /* myCSS.css in Resources */ = {isa = PBXBuildFile; fileRef = 9268156D1D75B1CE006FA983 /* myCSS.css */; };
+		926815701D78CD01006FA983 /* Title Page.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9268156F1D78CD01006FA983 /* Title Page.txt */; };
+		92EE05161D6CEDCC00BBE213 /* 1. Introduction.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92EE05151D6CEDCC00BBE213 /* 1. Introduction.txt */; };
+		92EE05181D6CEE7000BBE213 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE05171D6CEE7000BBE213 /* SectionViewController.swift */; };
+		92EE051C1D70AB1700BBE213 /* 2. Alphabet.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92EE051B1D70AB1700BBE213 /* 2. Alphabet.txt */; };
+		92EE05201D749FB500BBE213 /* 2.1.1 Vowels.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92EE051F1D749FB500BBE213 /* 2.1.1 Vowels.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -201,10 +209,18 @@
 		9211FFBF1D3BE861007E5273 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9211FFC01D3BE861007E5273 /* LearningTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningTableViewController.swift; sourceTree = "<group>"; };
 		9211FFC11D3BE861007E5273 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
-		9211FFC21D3BE861007E5273 /* memriseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = memriseViewController.swift; sourceTree = "<group>"; };
 		9211FFC31D3BE861007E5273 /* OrthographyGuideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrthographyGuideTableViewController.swift; sourceTree = "<group>"; };
-		9211FFC41D3BE861007E5273 /* SectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
 		9211FFCE1D3C0776007E5273 /* WERTY.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WERTY.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
+		926815631D75AD98006FA983 /* 2.1.2 Consonants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2.1.2 Consonants.txt"; sourceTree = "<group>"; };
+		926815641D75AD98006FA983 /* 2.2 Accent marks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2.2 Accent marks.txt"; sourceTree = "<group>"; };
+		926815651D75AD98006FA983 /* 3. Punctuation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "3. Punctuation.txt"; sourceTree = "<group>"; };
+		926815661D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "4. Capitalization and Hyphenation.txt"; sourceTree = "<group>"; };
+		9268156D1D75B1CE006FA983 /* myCSS.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = myCSS.css; sourceTree = "<group>"; };
+		9268156F1D78CD01006FA983 /* Title Page.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Title Page.txt"; sourceTree = "<group>"; };
+		92EE05151D6CEDCC00BBE213 /* 1. Introduction.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1. Introduction.txt"; sourceTree = "<group>"; };
+		92EE05171D6CEE7000BBE213 /* SectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
+		92EE051B1D70AB1700BBE213 /* 2. Alphabet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2. Alphabet.txt"; sourceTree = "<group>"; };
+		92EE051F1D749FB500BBE213 /* 2.1.1 Vowels.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2.1.1 Vowels.txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -333,12 +349,20 @@
 				9211FFBE1D3BE861007E5273 /* Main.storyboard */,
 				9211FFBF1D3BE861007E5273 /* LaunchScreen.storyboard */,
 				9211FFC01D3BE861007E5273 /* LearningTableViewController.swift */,
-				920F888D1D3C2D55001D6713 /* OrthographySections.txt */,
 				9211FFC11D3BE861007E5273 /* WebViewController.swift */,
-				9211FFC21D3BE861007E5273 /* memriseViewController.swift */,
 				9211FFC31D3BE861007E5273 /* OrthographyGuideTableViewController.swift */,
-				9211FFC41D3BE861007E5273 /* SectionTableViewController.swift */,
+				92EE05171D6CEE7000BBE213 /* SectionViewController.swift */,
 				4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */,
+				920F888D1D3C2D55001D6713 /* OrthographySections.txt */,
+				9268156F1D78CD01006FA983 /* Title Page.txt */,
+				92EE05151D6CEDCC00BBE213 /* 1. Introduction.txt */,
+				92EE051B1D70AB1700BBE213 /* 2. Alphabet.txt */,
+				92EE051F1D749FB500BBE213 /* 2.1.1 Vowels.txt */,
+				926815631D75AD98006FA983 /* 2.1.2 Consonants.txt */,
+				926815641D75AD98006FA983 /* 2.2 Accent marks.txt */,
+				926815651D75AD98006FA983 /* 3. Punctuation.txt */,
+				926815661D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt */,
+				9268156D1D75B1CE006FA983 /* myCSS.css */,
 				4EF16F9319D255030076AFCB /* Images.xcassets */,
 				4E807D9619461D9000D875D1 /* Supporting Files */,
 			);
@@ -608,13 +632,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				926815671D75AD98006FA983 /* 2.1.2 Consonants.txt in Resources */,
 				4EF16F9619D255030076AFCB /* Images.xcassets in Resources */,
 				920F888E1D3C2D55001D6713 /* OrthographySections.txt in Resources */,
+				92EE05161D6CEDCC00BBE213 /* 1. Introduction.txt in Resources */,
+				926815681D75AD98006FA983 /* 2.2 Accent marks.txt in Resources */,
+				9268156A1D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt in Resources */,
 				9211FFC61D3BE861007E5273 /* Assets.xcassets in Resources */,
 				4EF16F9119D254E00076AFCB /* Background.jpg in Resources */,
 				9211FFC81D3BE861007E5273 /* LaunchScreen.storyboard in Resources */,
+				926815691D75AD98006FA983 /* 3. Punctuation.txt in Resources */,
 				9211FFCF1D3C0776007E5273 /* WERTY.json in Resources */,
+				926815701D78CD01006FA983 /* Title Page.txt in Resources */,
+				92EE05201D749FB500BBE213 /* 2.1.1 Vowels.txt in Resources */,
 				9211FFC71D3BE861007E5273 /* Main.storyboard in Resources */,
+				92EE051C1D70AB1700BBE213 /* 2. Alphabet.txt in Resources */,
+				9268156E1D75B1CE006FA983 /* myCSS.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,11 +696,10 @@
 				920F888B1D3C29D4001D6713 /* TurtleBezierPath.m in Sources */,
 				920F88801D3C28E8001D6713 /* CYRKeyboardButtonView.m in Sources */,
 				920F887F1D3C28AF001D6713 /* CYRKeyboardButton.m in Sources */,
-				9211FFCB1D3BE861007E5273 /* memriseViewController.swift in Sources */,
 				9211FFC51D3BE861007E5273 /* ViewController.swift in Sources */,
+				92EE05181D6CEE7000BBE213 /* SectionViewController.swift in Sources */,
 				4EF16F9B19D2550D0076AFCB /* AppDelegate.swift in Sources */,
 				9211FFC91D3BE861007E5273 /* LearningTableViewController.swift in Sources */,
-				9211FFCD1D3BE861007E5273 /* SectionTableViewController.swift in Sources */,
 				9211FFCC1D3BE861007E5273 /* OrthographyGuideTableViewController.swift in Sources */,
 				9211FFCA1D3BE861007E5273 /* WebViewController.swift in Sources */,
 			);
