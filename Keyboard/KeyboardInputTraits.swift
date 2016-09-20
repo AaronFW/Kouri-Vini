@@ -1,8 +1,9 @@
 //
 //  KeyboardInputTraits.swift
 //
-//  Created by Alexei Baboulevitch on 11/1/14.
-//  Copyright (c) 2014 Alexei Baboulevitch. All rights reserved.
+//  Created by Alexei Baboulevitch on 6/9/14.
+//  Licensed under the 3-clause ("New") BSD license.
+//  Modified by Aaron Walton with contributions from others on GitHub
 //
 
 import Foundation

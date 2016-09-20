@@ -1,17 +1,16 @@
 //
 //  Catboard.swift
-//  TransliteratingKeyboard
+//
 //
 //  Created by Alexei Baboulevitch on 9/24/14.
-//  Copyright (c) 2014 Apple. All rights reserved.
-//
+//  Licensed under the 3-clause ("New") BSD license.
+//  Modified by Aaron Walton with contributions from others on GitHub
+
+/*This is the suggestion bar. The title of this class comes from Alexei Baboulevitch original demo which had cat emoji. At this point, the names have not been updated.*/
+
+
 
 import UIKit
-
-/*
-This is the demo keyboard. If you're implementing your own keyboard, simply follow the example here and then
-set the name of your KeyboardViewController subclass in the Info.plist file.
-*/
 
 let kCatTypeEnabled = "kCatTypeEnabled"
 

@@ -1,6 +1,10 @@
 //
 //  LightDarkView.swift
 // Base class that knows about dark mode vs. light mode
+//  Created by Simon Corston-Oliver.
+
+//
+//  Modified by Aaron Walton with contributions from others on GitHub
 
 import UIKit
 

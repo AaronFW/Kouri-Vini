@@ -1,6 +1,9 @@
 //
 //  SuggestionView.swift
 // The view to house the row of suggestion buttons across the top of the keyboard
+//
+//  Created by Simon Corston-Oliver 
+//  Modified by Aaron Walton with contributions from others on GitHub
 
 import UIKit
 

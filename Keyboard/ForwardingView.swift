@@ -1,9 +1,9 @@
 //
 //  ForwardingView.swift
-//  TransliteratingKeyboard
+//  
 //
-//  Created by Alexei Baboulevitch on 7/19/14.
-//  Copyright (c) 2014 Apple. All rights reserved.
+//  Created by Alexei Baboulevitch on 6/9/14.
+//  Licensed under the 3-clause ("New") BSD license.
 //
 
 import UIKit
@@ -351,7 +351,8 @@ class ForwardingView: UIView, UIGestureRecognizerDelegate {
         }
     }
 
-    override func touchesCancelled(touches: Set<UITouch>?, withEvent event: UIEvent?) {
+    
+   /* override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent?) {
         if let allTouches = touches {
             for touch in allTouches {
                 
@@ -362,7 +363,7 @@ class ForwardingView: UIView, UIGestureRecognizerDelegate {
                 self.touchToView[touch] = nil
             }
         }
-    }
+    } */
 
     func isLongPressEnableKey(key: KeyboardKey?) -> Bool {
 

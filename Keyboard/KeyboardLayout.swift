@@ -1,9 +1,9 @@
 //
 //  KeyboardLayout.swift
-//  TransliteratingKeyboard
 //
-//  Created by Alexei Baboulevitch on 7/25/14.
-//  Copyright (c) 2014 Apple. All rights reserved.
+//  Created by Alexei Baboulevitch on 6/9/14.
+//  Licensed under the 3-clause ("New") BSD license.
+//  Modified by Aaron Walton with contributions from others on GitHub
 //
 
 import UIKit
@@ -163,7 +163,7 @@ class GlobalColors: NSObject {
 
     class var darkModeRegularKey: UIColor { get { return UIColor.whiteColor().colorWithAlphaComponent(CGFloat(0.3)) }}
 
-    class var lightModeSpecialKey: UIColor { get { return UIColor(red: CGFloat(177)/CGFloat(255), green: CGFloat(177)/CGFloat(255), blue: CGFloat(177)/CGFloat(255), alpha: 1) }}
+    class var lightModeSpecialKey: UIColor { get { return UIColor(red: CGFloat(171)/CGFloat(255), green: CGFloat(177)/CGFloat(255), blue: CGFloat(188)/CGFloat(255), alpha: 1) }}
 
     class var darkModeSpecialKey: UIColor { get { return UIColor.grayColor().colorWithAlphaComponent(CGFloat(0.3)) }}
 

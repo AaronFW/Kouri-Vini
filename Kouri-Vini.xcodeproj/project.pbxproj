@@ -27,7 +27,6 @@
 		4EC2A47019DF811E00F789E1 /* ForwardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC2A46C19DF811E00F789E1 /* ForwardingView.swift */; };
 		4EE7599B19F75A0D00B4E6ED /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE7599A19F75A0D00B4E6ED /* Utilities.swift */; };
 		4EEFD78B19E0DF15004D4974 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEFD78A19E0DF15004D4974 /* Shapes.swift */; };
-		4EF16F9119D254E00076AFCB /* Background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4EF16F9019D254E00076AFCB /* Background.jpg */; };
 		4EF16F9619D255030076AFCB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EF16F9319D255030076AFCB /* Images.xcassets */; };
 		4EF16F9B19D2550D0076AFCB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */; };
 		73240ABC1C338A63007CA329 /* KeyboardLayoutSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73240ABB1C338A63007CA329 /* KeyboardLayoutSelection.swift */; };
@@ -61,20 +60,18 @@
 		920F888B1D3C29D4001D6713 /* TurtleBezierPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 82FD1A891B0B31A300A6D23D /* TurtleBezierPath.m */; };
 		920F888C1D3C29D8001D6713 /* TurtleBezierPath.h in Sources */ = {isa = PBXBuildFile; fileRef = 82FD1A881B0B31A300A6D23D /* TurtleBezierPath.h */; };
 		920F888E1D3C2D55001D6713 /* OrthographySections.txt in Resources */ = {isa = PBXBuildFile; fileRef = 920F888D1D3C2D55001D6713 /* OrthographySections.txt */; };
-		9211FFC51D3BE861007E5273 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFBC1D3BE861007E5273 /* ViewController.swift */; };
 		9211FFC61D3BE861007E5273 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9211FFBD1D3BE861007E5273 /* Assets.xcassets */; };
 		9211FFC71D3BE861007E5273 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9211FFBE1D3BE861007E5273 /* Main.storyboard */; };
 		9211FFC81D3BE861007E5273 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9211FFBF1D3BE861007E5273 /* LaunchScreen.storyboard */; };
 		9211FFC91D3BE861007E5273 /* LearningTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFC01D3BE861007E5273 /* LearningTableViewController.swift */; };
-		9211FFCA1D3BE861007E5273 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFC11D3BE861007E5273 /* WebViewController.swift */; };
 		9211FFCC1D3BE861007E5273 /* OrthographyGuideTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9211FFC31D3BE861007E5273 /* OrthographyGuideTableViewController.swift */; };
 		9211FFCF1D3C0776007E5273 /* WERTY.json in Resources */ = {isa = PBXBuildFile; fileRef = 9211FFCE1D3C0776007E5273 /* WERTY.json */; };
 		926815671D75AD98006FA983 /* 2.1.2 Consonants.txt in Resources */ = {isa = PBXBuildFile; fileRef = 926815631D75AD98006FA983 /* 2.1.2 Consonants.txt */; };
 		926815681D75AD98006FA983 /* 2.2 Accent marks.txt in Resources */ = {isa = PBXBuildFile; fileRef = 926815641D75AD98006FA983 /* 2.2 Accent marks.txt */; };
 		926815691D75AD98006FA983 /* 3. Punctuation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 926815651D75AD98006FA983 /* 3. Punctuation.txt */; };
 		9268156A1D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt in Resources */ = {isa = PBXBuildFile; fileRef = 926815661D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt */; };
-		9268156E1D75B1CE006FA983 /* myCSS.css in Resources */ = {isa = PBXBuildFile; fileRef = 9268156D1D75B1CE006FA983 /* myCSS.css */; };
 		926815701D78CD01006FA983 /* Title Page.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9268156F1D78CD01006FA983 /* Title Page.txt */; };
+		92CAFB2D1D7F5D9600B8F527 /* SetUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CAFB2C1D7F5D9600B8F527 /* SetUpTableViewController.swift */; };
 		92EE05161D6CEDCC00BBE213 /* 1. Introduction.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92EE05151D6CEDCC00BBE213 /* 1. Introduction.txt */; };
 		92EE05181D6CEE7000BBE213 /* SectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EE05171D6CEE7000BBE213 /* SectionViewController.swift */; };
 		92EE051C1D70AB1700BBE213 /* 2. Alphabet.txt in Resources */ = {isa = PBXBuildFile; fileRef = 92EE051B1D70AB1700BBE213 /* 2. Alphabet.txt */; };
@@ -173,7 +170,6 @@
 		4EC2A46C19DF811E00F789E1 /* ForwardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForwardingView.swift; sourceTree = "<group>"; };
 		4EE7599A19F75A0D00B4E6ED /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4EEFD78A19E0DF15004D4974 /* Shapes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
-		4EF16F9019D254E00076AFCB /* Background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Background.jpg; sourceTree = "<group>"; };
 		4EF16F9219D254EA0076AFCB /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EF16F9319D255030076AFCB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -203,20 +199,18 @@
 		82FD1A901B0B3C8D00A6D23D /* DefaultKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefaultKeyboard.swift; sourceTree = "<group>"; };
 		82FD1A921B0B3D3800A6D23D /* KeyboardLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardLayout.swift; sourceTree = "<group>"; };
 		920F888D1D3C2D55001D6713 /* OrthographySections.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OrthographySections.txt; sourceTree = "<group>"; };
-		9211FFBC1D3BE861007E5273 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9211FFBD1D3BE861007E5273 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9211FFBE1D3BE861007E5273 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9211FFBF1D3BE861007E5273 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9211FFC01D3BE861007E5273 /* LearningTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LearningTableViewController.swift; sourceTree = "<group>"; };
-		9211FFC11D3BE861007E5273 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		9211FFC31D3BE861007E5273 /* OrthographyGuideTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrthographyGuideTableViewController.swift; sourceTree = "<group>"; };
 		9211FFCE1D3C0776007E5273 /* WERTY.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = WERTY.json; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.javascript; };
 		926815631D75AD98006FA983 /* 2.1.2 Consonants.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2.1.2 Consonants.txt"; sourceTree = "<group>"; };
 		926815641D75AD98006FA983 /* 2.2 Accent marks.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2.2 Accent marks.txt"; sourceTree = "<group>"; };
 		926815651D75AD98006FA983 /* 3. Punctuation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "3. Punctuation.txt"; sourceTree = "<group>"; };
 		926815661D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "4. Capitalization and Hyphenation.txt"; sourceTree = "<group>"; };
-		9268156D1D75B1CE006FA983 /* myCSS.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = myCSS.css; sourceTree = "<group>"; };
 		9268156F1D78CD01006FA983 /* Title Page.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Title Page.txt"; sourceTree = "<group>"; };
+		92CAFB2C1D7F5D9600B8F527 /* SetUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SetUpTableViewController.swift; path = ../SetUpTableViewController.swift; sourceTree = "<group>"; };
 		92EE05151D6CEDCC00BBE213 /* 1. Introduction.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "1. Introduction.txt"; sourceTree = "<group>"; };
 		92EE05171D6CEE7000BBE213 /* SectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SectionViewController.swift; sourceTree = "<group>"; };
 		92EE051B1D70AB1700BBE213 /* 2. Alphabet.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "2. Alphabet.txt"; sourceTree = "<group>"; };
@@ -344,12 +338,11 @@
 		4E807D9519461D9000D875D1 /* HostingApp */ = {
 			isa = PBXGroup;
 			children = (
-				9211FFBC1D3BE861007E5273 /* ViewController.swift */,
 				9211FFBD1D3BE861007E5273 /* Assets.xcassets */,
 				9211FFBE1D3BE861007E5273 /* Main.storyboard */,
 				9211FFBF1D3BE861007E5273 /* LaunchScreen.storyboard */,
+				92CAFB2C1D7F5D9600B8F527 /* SetUpTableViewController.swift */,
 				9211FFC01D3BE861007E5273 /* LearningTableViewController.swift */,
-				9211FFC11D3BE861007E5273 /* WebViewController.swift */,
 				9211FFC31D3BE861007E5273 /* OrthographyGuideTableViewController.swift */,
 				92EE05171D6CEE7000BBE213 /* SectionViewController.swift */,
 				4EF16F9A19D2550D0076AFCB /* AppDelegate.swift */,
@@ -362,7 +355,6 @@
 				926815641D75AD98006FA983 /* 2.2 Accent marks.txt */,
 				926815651D75AD98006FA983 /* 3. Punctuation.txt */,
 				926815661D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt */,
-				9268156D1D75B1CE006FA983 /* myCSS.css */,
 				4EF16F9319D255030076AFCB /* Images.xcassets */,
 				4E807D9619461D9000D875D1 /* Supporting Files */,
 			);
@@ -372,7 +364,6 @@
 		4E807D9619461D9000D875D1 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4EF16F9019D254E00076AFCB /* Background.jpg */,
 				4EF16F9219D254EA0076AFCB /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -588,10 +579,13 @@
 				TargetAttributes = {
 					4E807D9219461D9000D875D1 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 775G6B3G89;
+						LastSwiftMigration = 0800;
 					};
 					4E807DB819461DC700D875D1 = {
 						CreatedOnToolsVersion = 6.0;
 						DevelopmentTeam = 775G6B3G89;
+						LastSwiftMigration = 0800;
 					};
 					4E8EF38019F95D74009CBF5D = {
 						CreatedOnToolsVersion = 6.1;
@@ -639,7 +633,6 @@
 				926815681D75AD98006FA983 /* 2.2 Accent marks.txt in Resources */,
 				9268156A1D75AD98006FA983 /* 4. Capitalization and Hyphenation.txt in Resources */,
 				9211FFC61D3BE861007E5273 /* Assets.xcassets in Resources */,
-				4EF16F9119D254E00076AFCB /* Background.jpg in Resources */,
 				9211FFC81D3BE861007E5273 /* LaunchScreen.storyboard in Resources */,
 				926815691D75AD98006FA983 /* 3. Punctuation.txt in Resources */,
 				9211FFCF1D3C0776007E5273 /* WERTY.json in Resources */,
@@ -647,7 +640,6 @@
 				92EE05201D749FB500BBE213 /* 2.1.1 Vowels.txt in Resources */,
 				9211FFC71D3BE861007E5273 /* Main.storyboard in Resources */,
 				92EE051C1D70AB1700BBE213 /* 2. Alphabet.txt in Resources */,
-				9268156E1D75B1CE006FA983 /* myCSS.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,12 +688,11 @@
 				920F888B1D3C29D4001D6713 /* TurtleBezierPath.m in Sources */,
 				920F88801D3C28E8001D6713 /* CYRKeyboardButtonView.m in Sources */,
 				920F887F1D3C28AF001D6713 /* CYRKeyboardButton.m in Sources */,
-				9211FFC51D3BE861007E5273 /* ViewController.swift in Sources */,
 				92EE05181D6CEE7000BBE213 /* SectionViewController.swift in Sources */,
 				4EF16F9B19D2550D0076AFCB /* AppDelegate.swift in Sources */,
 				9211FFC91D3BE861007E5273 /* LearningTableViewController.swift in Sources */,
+				92CAFB2D1D7F5D9600B8F527 /* SetUpTableViewController.swift in Sources */,
 				9211FFCC1D3BE861007E5273 /* OrthographyGuideTableViewController.swift in Sources */,
-				9211FFCA1D3BE861007E5273 /* WebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -841,6 +832,7 @@
 				METAL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Keyboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = NO;
@@ -878,6 +870,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				METAL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "Keyboard-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
@@ -890,6 +883,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 775G6B3G89;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HostingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -897,6 +891,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Waffle.Kouri-Vini";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				"TEST_HOST[sdk=*]" = "";
 			};
@@ -908,6 +903,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 775G6B3G89;
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = HostingApp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -915,6 +911,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Waffle.Kouri-Vini";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 2.3;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -926,6 +923,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 775G6B3G89;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -935,6 +933,7 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Keyboard/Keyboard-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 				"TEST_HOST[sdk=*]" = "";
 			};
 			name = Debug;
@@ -946,6 +945,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEFINES_MODULE = NO;
+				DEVELOPMENT_TEAM = 775G6B3G89;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				INFOPLIST_FILE = Keyboard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
@@ -954,6 +954,7 @@
 				PROVISIONING_PROFILE = "";
 				SKIP_INSTALL = YES;
 				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/Keyboard/Keyboard-Bridging-Header.h";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

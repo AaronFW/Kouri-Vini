@@ -3,8 +3,9 @@
 //  TastyImitationKeyboard
 //
 //  Created by Alexei Baboulevitch on 10/5/14.
-//  Copyright (c) 2014 Apple. All rights reserved.
-//
+//  Licensed under the 3-clause ("New") BSD license.
+//  Modified by Aaron Walton with contributions from others on GitHub
+
 
 import UIKit
 
@@ -111,15 +112,15 @@ class Shape: UIView {
         override func drawRect(rect: CGRect) {
             let ctx = UIGraphicsGetCurrentContext()
             
-            CGContextSaveGState(ctx)
+            CGContextSaveGState(ctx!)
             
             let xOffset = (self.bounds.width - self.shape.bounds.width) / CGFloat(2)
             let yOffset = (self.bounds.height - self.shape.bounds.height) / CGFloat(2)
-            CGContextTranslateCTM(ctx, xOffset, yOffset)
+            CGContextTranslateCTM(ctx!, xOffset, yOffset)
             
             self.shape.drawCall(shape.color != nil ? shape.color! : UIColor.blackColor())
             
-            CGContextRestoreGState(ctx)
+            CGContextRestoreGState(ctx!)
         }
     }
 }
@@ -160,13 +161,13 @@ func centerShape(fromSize: CGSize, toRect: CGRect) {
     let yOffset = (toRect.height - fromSize.height) / CGFloat(2)
     
     let ctx = UIGraphicsGetCurrentContext()
-    CGContextSaveGState(ctx)
-    CGContextTranslateCTM(ctx, xOffset, yOffset)
+    CGContextSaveGState(ctx!)
+    CGContextTranslateCTM(ctx!, xOffset, yOffset)
 }
 
 func endCenter() {
     let ctx = UIGraphicsGetCurrentContext()
-    CGContextRestoreGState(ctx)
+    CGContextRestoreGState(ctx!)
 }
 
 func drawBackspace(bounds: CGRect, color: UIColor) {

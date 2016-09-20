@@ -1,17 +1,18 @@
 //
 //  CatboardBanner.swift
-//  TastyImitationKeyboard
+//  
 //
 //  Created by Alexei Baboulevitch on 10/5/14.
-//  Copyright (c) 2014 Apple. All rights reserved.
-//
+//  Licensed under the 3-clause ("New") BSD license.
+//  Modified by Aaron Walton with contributions from others on GitHub
+
+/*This is the suggestion bar. The title of this class comes from Alexei Baboulevitch original demo which had cat emoji. At this point, the names have not been updated.*/
+
+
 
 import UIKit
 
-/*
-This is the demo banner. The banner is needed so that the top row popups have somewhere to go. Might as well fill it
-with something (or leave it blank if you like.)
-*/
+
 
 class CatboardBanner: SuggestionView {
     
@@ -219,7 +220,7 @@ class CatboardBanner: SuggestionView {
 		
 	}
 	
-	override func touchesCancelled(touches: Set<UITouch>!, withEvent event: UIEvent!)
+	override func touchesCancelled(touches: Set<UITouch>, withEvent event: UIEvent!)
 	{
 		if self.frame.size.height == 30
 		{

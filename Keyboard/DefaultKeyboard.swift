@@ -3,8 +3,8 @@
 //  TransliteratingKeyboard
 //
 //  Created by Alexei Baboulevitch on 7/10/14.
-//  Copyright (c) 2014 Apple. All rights reserved.
-//
+//  Licensed under the 3-clause ("New") BSD license.
+//  Modified by Aaron Walton with contributions from others on GitHub
 
 import Foundation
 

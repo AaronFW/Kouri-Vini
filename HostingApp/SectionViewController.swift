@@ -38,10 +38,8 @@ class SectionViewController: UIViewController {
     func configureView() {
         // Update the user interface for the detail item.
         if let detail = self.detailItem {
-            if let label = self.textScroll {
+            if self.textScroll != nil {
                 navigationItem.title = detail.description
-                
-                print("yes", detail.description)
             }
         }
     }

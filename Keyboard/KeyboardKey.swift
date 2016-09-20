@@ -4,7 +4,7 @@
 //
 //  Created by Alexei Baboulevitch on 6/9/14.
 //  Copyright (c) 2014 Apple. All rights reserved.
-//
+//  Modified by Aaron Walton with contributions from others on GitHub
 
 import UIKit
 

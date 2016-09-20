@@ -1,10 +1,10 @@
 //
 //  WordStore.swift
-//  TastyImitationKeyboard
+//  
 //
 //  Created by Simon Corston-Oliver on 13/02/16.
 //  Copyright © 2016 Apple. All rights reserved.
-//
+//  Modified by Aaron Walton with contributions from others on GitHub
 
 import Foundation
 

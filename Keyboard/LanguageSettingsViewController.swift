@@ -1,9 +1,10 @@
 //
 //  LanguageSettingsViewController.swift
-//  TastyImitationKeyboard
+//  
 //
 //  Created by Simon Corston-Oliver on 2/01/16.
 //  Copyright © 2016 Apple. All rights reserved.
+//  Modified by Aaron Walton with contributions from others on GitHub
 //
 
 import UIKit
@@ -41,6 +42,7 @@ class LanguageSettingsViewController: UIViewController, UITableViewDataSource, U
         self.view.addSubview(self.tableView)
 
         self.addConstraints()
+    
     }
 
     required init(coder aDecoder: NSCoder) {
@@ -187,9 +189,12 @@ class LanguageSettingsViewController: UIViewController, UITableViewDataSource, U
 
         self._navController?.pushViewController(vc, animated: true)
     }
-
+    
+    
+    
     override func viewDidAppear(animated: Bool) {
         self.tableView.reloadData()
+        
     }
 
     func updateAppearance() {
@@ -251,9 +256,7 @@ class DefaultSettingsTableViewCell: UITableViewCell {
         self.settingLookupKey = setting
         self.sw.on = NSUserDefaults.standardUserDefaults().boolForKey(setting)
         self.sw.addTarget(self, action: #selector(LanguageSettingsViewController.toggleSetting(_:)), forControlEvents: UIControlEvents.ValueChanged)
-
         self.label.text = label
-
         self.applyColorScheme(colorScheme)
         self.addConstraints()
     }

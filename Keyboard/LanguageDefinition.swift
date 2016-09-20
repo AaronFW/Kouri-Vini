@@ -1,10 +1,11 @@
 //
 //  LanguageDefinition.swift
-//  TastyImitationKeyboard
+//  
 //
 //  Created by Simon Corston-Oliver on 7/11/15.
 //  Copyright © 2015 Apple. All rights reserved.
 //
+//  Modified by Aaron Walton with contributions from others on GitHub
 
 import Foundation
 

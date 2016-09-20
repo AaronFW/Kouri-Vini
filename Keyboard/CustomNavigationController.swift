@@ -1,9 +1,9 @@
 //
 //  CustomNavigationController.swift
-//  TastyImitationKeyboard
 //
 //  Created by Simon Corston-Oliver on 3/01/16.
 //  Copyright © 2016 Apple. All rights reserved.
+//   Modified by Aaron Walton with contributions from others on GitHub
 //
 
 import Foundation

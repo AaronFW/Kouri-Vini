@@ -36,7 +36,6 @@ class OrthographyGuideTableViewController: UITableViewController {
                 let object = objects[indexPath.row]
                 let controller = segue.destinationViewController as! SectionViewController
                 controller.detailItem = object
-                print(object)
                 controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
@@ -69,10 +68,9 @@ class OrthographyGuideTableViewController: UITableViewController {
         if let sectionsFile = NSBundle.mainBundle().pathForResource("OrthographySections", ofType: "txt") {
             if let sections = try? String(contentsOfFile: sectionsFile, usedEncoding: nil) {
             let lines = sections.componentsSeparatedByString("\n")
-            for (index, line) in lines.enumerate() {
+            for (_, line) in lines.enumerate() {
                 
                 objects.append(line)
-                print(objects.count)
                 
                 
             }
