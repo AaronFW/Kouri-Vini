@@ -10,8 +10,7 @@ Additionally, if you want to contribute to this project, feel free to do so. I a
 
 ## Note:
 NOTE: If you want to see what the keyboard is capable of, check out the project version by PolishedCode https://github.com/polishedcode/tasty-imitation-keyboard or the original by Archagon https://github.com/archagon/tasty-imitation-keyboard . In those projects, the hosting-app is created for the purpose of allowing users to see the keyboard's capabilities.
-The Kouri-Vini Hosting app has three main purposes (1) to instruct users on how to enable the keyboard (2) allow for access to a 'chatroom' like atmostphere (yet to be completed) and (3) access to Kouri-Vini language resources.
-The 'chatroom' will likely rely on Firebase, but I have yet to create it.
+The Kouri-Vini Hosting app has two main purposes at the moment (1) to instruct users on how to enable the keyboard and (2) access to Kouri-Vini language resources.
 
 I have removed some features from PolishedCode's project to fit my needs and the needs of my audience. I have not yet removed the undesired code, but it has been left non-functioning. I also hope to revise the names of some functions to be conformed to the current project.
 
