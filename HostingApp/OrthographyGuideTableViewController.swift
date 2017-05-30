@@ -19,7 +19,7 @@ class OrthographyGuideTableViewController: UITableViewController {
         loadSections()
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
        
         super.viewWillAppear(animated)
     }
@@ -30,13 +30,13 @@ class OrthographyGuideTableViewController: UITableViewController {
     }
     
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let object = objects[indexPath.row]
-                let controller = segue.destinationViewController as! SectionViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                let controller = segue.destination as! SectionViewController
+                controller.detailItem = object as AnyObject?
+                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem
                 controller.navigationItem.leftItemsSupplementBackButton = true
             }
         }
@@ -44,31 +44,31 @@ class OrthographyGuideTableViewController: UITableViewController {
     
     // MARK: - Table View
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return objects.count
     }
     
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let object = objects[indexPath.row]
         cell.textLabel!.text = object
         return cell
     }
     
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
         return true
     }
     
     func loadSections() {
-        if let sectionsFile = NSBundle.mainBundle().pathForResource("OrthographySections", ofType: "txt") {
-            if let sections = try? String(contentsOfFile: sectionsFile, usedEncoding: nil) {
-            let lines = sections.componentsSeparatedByString("\n")
-            for (_, line) in lines.enumerate() {
+        if let sectionsFile:String = Bundle.main.path(forResource: "OrthographySections", ofType: "txt") {
+            if let sections = try? NSString(contentsOfFile: sectionsFile, encoding: String.Encoding.utf8.rawValue) {
+            let lines = sections.components(separatedBy: "\n")
+            for (_, line) in lines.enumerated() {
                 
                 objects.append(line)
                 
@@ -77,5 +77,7 @@ class OrthographyGuideTableViewController: UITableViewController {
         }
         
     }
+
+
 }
 }

@@ -9,12 +9,12 @@
 import UIKit
 
 extension UILabel {
-    func setHTMLFromString(text: String) {
-        let modifiedFont = NSString(format:"<span style=\"font-family:Helvetica Neue; font-size: \(self.font!.pointSize)\">%@</span>", text) as String
+    func setHTMLFromString(_ text: String) {
+        let modifiedFont = NSString(format:"<span style=\"font-family:Helvetica Neue; font-size: \(self.font!.pointSize)\">%@</span>" as NSString, text) as String
         
         let attrStr = try! NSAttributedString(
-            data: modifiedFont.dataUsingEncoding(NSUnicodeStringEncoding, allowLossyConversion: true)!,
-            options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: NSUTF8StringEncoding],
+            data: modifiedFont.data(using: String.Encoding.unicode, allowLossyConversion: true)!,
+            options: [NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType, NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue],
             documentAttributes: nil)
         
         self.attributedText = attrStr
@@ -53,39 +53,51 @@ class SectionViewController: UIViewController {
         // The following creates a ScrollView, takes the text for the section from an file, divides it, and puts it in labels. Currently, this code is working and working relatively well.
         
         let sv = UIScrollView(frame: self.view.bounds)
-        sv.autoresizingMask = [.FlexibleWidth, .FlexibleHeight]
+        sv.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         self.view.addSubview(sv)
-        sv.backgroundColor = UIColor.whiteColor()
+        sv.backgroundColor = UIColor.white
         var y: CGFloat = 10
         let file = detailItem as! String
         navigationItem.title = file
-        if let sectionsFile = NSBundle.mainBundle().pathForResource(file, ofType: "txt") {
-            if let sectionText = try? String(contentsOfFile: sectionsFile, usedEncoding: nil) {
-                let lineMaker = sectionText.stringByReplacingOccurrencesOfString("*", withString: "\n")
-                let lines = lineMaker.componentsSeparatedByString("\n")
-                for (index, line) in lines.enumerate() {
+        
+        
+        /* let sectionsFile:String = Bundle.main.path(forResource: "OrthographySections", ofType: "txt")!
+         let sections = try? String(contentsOfFile: sectionsFile, encoding: String.Encoding.utf8)
+         
+         let lines = sections?.components(separatedBy: "\n")
+         for (_, line) in (lines?.enumerated())! {
+         
+         objects.append(line)
+ 
+ */
+        if let sectionsFile:String = Bundle.main.path(forResource: file, ofType: "txt") {
+            if let sectionText = try? NSString(contentsOfFile: sectionsFile, encoding: String.Encoding.utf8.rawValue) {
+                let lineMaker = sectionText.replacingOccurrences(of: "*", with: "\n")
+                let lines = lineMaker.components(separatedBy: "\n")
+                for (index, line) in lines.enumerated() {
                     labels.append(line)
             
                     let label = UILabel()
                     label.setHTMLFromString(labels[index])
                     label.sizeToFit()
                     label.numberOfLines = 0
-                    label.lineBreakMode = .ByWordWrapping
-                    label.frame.origin = CGPointMake(10,y)
+                    label.lineBreakMode = .byWordWrapping
+                    label.frame.origin = CGPoint(x: 10,y: y)
                     sv.addSubview(label)
-                    label.backgroundColor = UIColor.whiteColor()
+                    label.backgroundColor = UIColor.white
                     let desiredLabelWidth = self.view.bounds.size.width - 20
-                    let size = label.sizeThatFits(CGSize(width: desiredLabelWidth, height: CGFloat.max))
+                    let size = label.sizeThatFits(CGSize(width: desiredLabelWidth, height: CGFloat.greatestFiniteMagnitude))
                     label.frame = CGRect(x: 10, y: y, width: desiredLabelWidth, height: size.height)
                     y += label.bounds.size.height + 10
-                    label.autoresizingMask = .FlexibleWidth
+                    label.autoresizingMask = .flexibleWidth
                 }
-            }
+        
             
             var sz = sv.bounds.size
             sz.height = y
             sv.contentSize = sz
             
+        }
         }
     }
 
